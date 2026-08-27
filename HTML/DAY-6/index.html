@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+</head>
+<body>
+    <section>
+    <div>
+        <div>
+            <h1>Student Registration</h1>
+        </div>
+        <div>
+            <form>
+                <table cellspacing="4" cellpadding="2" width="30%">
+                    <tr>
+                        <td><label for="name">Name</label></td>
+                        <td><input type="text" minlength="5" maxlength="20" required></td>
+                    </tr>
+                    
+                     <tr>
+                        <td><label for="email">E-Mail</label></td>
+                        <td><input type="email" required></td>
+                    </tr>
+                    <br>
+                     <tr>
+                        <td><label for="mobile">Mobile number</label></td>
+                        <td><input type="number" minlength="10" maxlength="12" required></td>
+                    </tr>
+                     <tr>
+                        <td><label for="dateofbirth">Date of Birth</label></td>
+                        <td><input type="date" required></td>
+                    </tr>
+                     <tr>
+                        <td><label for="gender">Gender</label></td>
+                        <td><input type="radio"> Male
+                        <input type="radio"> Male</td>
+                    </tr>
+                    <tr>
+                        <td><label for="address">Address</label></td>
+                        <td><textarea name="address" id="address" placeholder="Enter with pincode"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><label for="skills">Skill set</label></td>
+                        <td><input type="checkbox">HTML
+                        <input type="checkbox">CSS
+                        <input type="checkbox">JavaScript
+                        <input type="checkbox">React</td>                        
+                    </tr>
+                    <tr>
+                        <td><label for="batch">Batch</label></td>
+                        <td>
+                            <select name="batch" id="batch"><option value="batch">9-10am</option>
+                        <option value="batch">10-11am</option>
+                        <option value="batch">11-12am</option></select></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    </section>
+</body>
+</html>
