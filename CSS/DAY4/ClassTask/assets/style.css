@@ -1,0 +1,19 @@
+  
+.parent{
+background-color: rgb(196, 217, 235);
+padding: 30px;
+margin: 30px;   
+}
+
+.run{
+
+    background-color: #e4eff3;
+    padding: 10px;
+    border: solid 1px rgb(167, 163, 163);
+    margin: auto;
+    margin-bottom: 10px;
+    width: 15%;
+    height: 10%;
+    text-align: center;
+    box-shadow: 1px 2px 6px 2px #979797;
+}

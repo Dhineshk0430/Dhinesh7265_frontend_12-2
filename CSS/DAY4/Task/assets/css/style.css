@@ -1,0 +1,54 @@
+
+.parent{
+    background-color: rgb(169, 240, 192);
+    padding: 20px;
+    border: solid 1px black;
+    margin: 20px;
+    margin: auto;
+
+}
+
+.id{
+    background-image: url(../img/bg.png) ;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    padding: 60px;
+    padding-top: 10px;
+    padding-bottom: 80px;
+    border: 1px solid black;
+    margin: auto;
+    width: 150px;
+    height: 280px;
+    text-align: center;
+    
+}
+
+.id>img{
+
+    width: 100px;
+    margin: auto;
+    box-shadow:#918b8b 0px 1px 5px 1px }    
+
+.id>h3{
+    margin-bottom: 5px;
+}
+
+.id>h4,p{
+    margin: 5px 0px;
+    font-size: 15px;
+}
+.id>h3{
+    font-size:18px;
+}
+.id>h2{
+    background-color: blue;
+    color: white;
+    padding: 4px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-style: italic;
+    border: solid 3px white;
+   box-shadow: #918b8b 1px 1px 2px 2px;
+}
