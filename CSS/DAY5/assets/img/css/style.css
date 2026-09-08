@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html
+{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none ;
+    color: white;
+}
+.head{
+    background-color: rgba(33, 21, 15, 0.92);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    justify-content: space-between;
+}
+
+.title{
+    color: #f5d7a1;
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 40px;
+}
+.nav{
+    display: flex;
+    gap: 40px;
+    padding-right: 40PX;
+}
+
+.banner{
+    background-image: url(../banner.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 86vh;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 80px 10%;
+}
+
+.banner>h1{
+    color: #f5d7a1;
+    font-size: 100px;
+}
