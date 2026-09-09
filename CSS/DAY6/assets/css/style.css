@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.hero{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-left: 60px;
+
+.hero>img{
+    width: 250px;
+}
+
+.banner{
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+
+    .banner > img {
+    width: 96%;
+}
