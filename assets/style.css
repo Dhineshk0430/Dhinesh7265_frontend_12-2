@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    color: white;
+
+    background:
+        radial-gradient(circle at top left, #6c2cff, transparent 35%),
+        radial-gradient(circle at bottom right, #00d4ff, transparent 35%),
+        linear-gradient(135deg, #08001c, #12002f);
+
+    padding: 40px 7%;
+}
+
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile-section {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 70px;
+}
+
+.profile-card {
+
+    width: 100%;
+    max-width: 900px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 35px;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.4);
+
+    animation: profileAppear 1s ease;
+}
+
+
+.profile-card img {
+
+    width: 150px;
+    height: 150px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 4px solid white;
+
+}
+
+
+.profile-info h1 {
+    font-size: 35px;
+
+    margin-bottom: 8px;
+}
+
+.profile-info h3 {
+
+    color: #55e7ff;
+
+    margin-bottom: 15px;
+}
+
+.profile-info p {
+
+    color: #ddd;
+
+    line-height: 1.6;
+
+    margin-bottom: 8px;
+}
+
+
+/* Profile Buttons */
+
+.profile-buttons {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 20px;
+}
+
+.profile-buttons a {
+
+    text-decoration: none;
+
+    color: white;
+
+    padding: 9px 18px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.15);
+
+    transition: 0.3s;
+}
+
+.profile-buttons a:hover {
+
+    background: white;
+
+    color: #16002f;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   TOPICS
+========================= */
+
+.topics-section {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.topics-section h2 {
+
+    font-size: 40px;
+
+    margin-bottom: 10px;
+}
+
+.section-description {
+
+    color: #ccc;
+
+    margin-bottom: 40px;
+}
+
+
+/* Cards */
+
+.topic-container {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 25px;
+}
+
+
+.topic-card {
+
+    width: 220px;
+
+    min-height: 270px;
+
+    padding: 25px;
+
+    text-align: left;
+
+    text-decoration: none;
+
+    color: white;
+
+    border-radius: 22px;
+
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(12px);
+
+    transition: 0.4s;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* Hover Animation */
+
+.topic-card:hover {
+
+    transform:
+        translateY(-12px)
+        scale(1.03);
+
+    background: rgba(255,255,255,0.15);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.4);
+}
+
+
+.topic-icon {
+
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 18px;
+
+    font-weight: bold;
+
+    font-size: 18px;
+
+    margin-bottom: 25px;
+
+    background: rgba(255,255,255,0.15);
+    text-align: center;
+}
+
+.topic-iconbs{
+ width: 150px;
+    height: 70px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 18px;
+
+    font-weight: bold;
+
+    font-size: 18px;
+
+    margin-bottom: 25px;
+
+    background: rgba(255,255,255,0.15);
+    text-align: center;
+}
+
+
+.topic-card h3 {
+
+    font-size: 23px;
+
+    margin-bottom: 12px;
+}
+
+
+.topic-card p {
+
+    color: #ccc;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+
+.topic-card span {
+
+    color: #55e7ff;
+
+    font-weight: bold;
+}
+
+
+/* Different Card Effects */
+
+.html-card:hover {
+    border-color: #ff7043;
+}
+
+.css-card:hover {
+    border-color: #42a5f5;
+}
+
+
+/* Footer */
+
+footer {
+
+    text-align: center;
+
+    margin-top: 70px;
+
+    color: #aaa;
+}
+
+
+/* Animation */
+
+@keyframes profileAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 25px 5%;
+    }
+
+    .profile-card {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .profile-buttons {
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+    .topic-card {
+
+        width: 100%;
+
+        max-width: 350px;
+    }
+
+    .topics-section h2 {
+
+        font-size: 30px;
+    }
+
+}
