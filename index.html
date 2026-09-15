@@ -1,145 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Dhinesh Kumar | Learning Portfolio</title>
-
-    <link rel="stylesheet" href="assets/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="R. Dhinesh Kumar - Full Stack Development learning portfolio and projects.">
+  <title>R. Dhinesh Kumar | Developer Portfolio</title>
+  <link rel="stylesheet" href="assets/style.css">
 </head>
-
 <body>
+  <div class="bg-orb orb-one"></div>
+  <div class="bg-orb orb-two"></div>
 
-    <!-- Profile Section -->
+  <header class="site-header">
+    <a class="brand" href="#home"><span>DK</span> Dhinesh kumar</a>
+    <nav class="navbar" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#mission">Mission</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <section class="profile-section">
-
-        <div class="profile-card">
-
-            <img src="assets/img/myphoto.jpeg" alt="Profile Photo">
-
-            <div class="profile-info">
-
-                <h1>R. Dhinesh Kumar</h1>
-
-                <h3>Full Stack Developer</h3>
-
-                <p>
-                    B.A. English Literature | Full Stack Development
-                </p>
-
-                <p>
-                    Welcome to my learning portfolio where I showcase
-                    my daily tasks, projects and technical skills.
-                </p>
-
-                <div class="profile-buttons">
-
-                    <a href="https://github.com/Dhineshk0430" target="_blank">GitHub</a>
-
-                    <a href="https://www.linkedin.com/in/dhinesh-kumar-9815b12b0/" target="_blank">LinkedIn</a>
-
-
-                </div>
-
-            </div>
-
+  <main>
+    <section id="home" class="hero section-wrap">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">HELLO, I'M DHINESH KUMAR</p>
+        <h1>Building my way into <span>Full Stack Development.</span></h1>
+        <p class="hero-text">B.A. English Literature student and aspiring developer documenting my daily learning journey through real HTML, CSS, Bootstrap, Tailwind CSS and web projects.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#projects">Explore Projects ↗</a>
         </div>
+        
+      </div>
 
+      <div class="profile-panel reveal delay-one">
+        <div class="profile-glow"></div>
+        <img src="assets/img/myphoto.jpeg" alt="Portrait of R. Dhinesh Kumar">
+        <span class="status"><i></i> Currently learning</span>
+        <h2>R. Dhinesh Kumar</h2>
+        <p>Full Stack Developer — in progress</p>
+        <div class="mini-tags"><span>HTML</span><span>CSS</span><span>Bootstrap</span><span>Tailwind</span></div>
+        <div class="socials">
+          <a href="https://github.com/Dhineshk0430" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/dhinesh-kumar-9815b12b0/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+      </div>
     </section>
 
-
-    <!-- Topics Section -->
-
-    <section class="topics-section">
-
-        <h2>My Learning Journey</h2>
-
-        <p class="section-description">
-            Explore my subjects, daily tasks and projects.
-        </p>
-
-
-        <div class="topic-container">
-
-            <!-- HTML -->
-
-            <a href="HTML/index.html"target="_blank" class="topic-card html-card">
-
-                <div class="topic-icon">
-                    HTML
-                </div>
-
-                <h3>HTML</h3>
-
-                <p>
-                    HTML5 fundamentals, semantic elements,
-                    forms, tables and layouts.
-                </p>
-
-                <span>Explore →</span>
-
-            </a>
-
-
-            <!-- CSS -->
-
-            <a href="CSS/index.html" target="_blank" class="topic-card css-card">
-
-                <div class="topic-icon">
-                    CSS
-                </div>
-
-                <h3>CSS</h3>
-
-                <p>
-                    Styling, Flexbox, Grid, animations,
-                    responsive design and layouts.
-                </p>
-
-                <span>Explore →</span>
-
-            </a>
-
-
-            </a>
-
-             <!-- TAILWIND AND BOOTSTRAP -->
-
-            <a href="BS&TAILWIND/index.html" target="_blank" class="topic-card bs&tw-card">
-
-                <div class="topic-iconbs" >
-                    BootStrap & Tailwind CSS
-                </div>
-
-                <h3>BootStrap & Tailwind CSS</h3>
-
-                <p>
-                   Learning BootStrap and Tailwind CSS to use predifined CSS style.
-                </p>
-
-                <span>Explore →</span>
-
-            </a>
-
-
-            </a>
-
-        </div>
-
+    <section id="mission" class="section-wrap section-block">
+      <div class="section-heading reveal">
+        <p class="eyebrow">02 / CURRENT MISSION</p>
+        <h2>Learn → Build → Improve</h2>
+        <p>My portfolio grows together with my skills. Each track below opens the real work inside this repository.</p>
+      </div>
+      <div class="mission-grid">
+        <a class="mission-card html" href="HTML/index.html">
+          <div class="card-top"><span class="number">01</span><span class="pill">FOUNDATION</span></div>
+          <h3>HTML</h3><p>HTML5 structure, semantic elements, forms, tables, links and practical pages.</p><span class="card-link">Open HTML journey →</span>
+        </a>
+        <a class="mission-card css" href="CSS/index.html">
+          <div class="card-top"><span class="number">02</span><span class="pill">DESIGN</span></div>
+          <h3>CSS</h3><p>Selectors, box model, display, positions, pseudo classes, Grid, units and responsive layouts.</p><span class="card-link">Open CSS journey →</span>
+        </a>
+        <a class="mission-card tools" href="BS&TAILWIND/index.html">
+          <div class="card-top"><span class="number">03</span><span class="pill">FRAMEWORKS</span></div>
+          <h3>Bootstrap + Tailwind</h3><p>Exploring utility-first and component-based styling to build interfaces faster.</p><span class="card-link">Open framework journey →</span>
+        </a>
+      </div>
     </section>
 
+    <section id="projects" class="section-wrap section-block">
+      <div class="section-heading reveal">
+        <p class="eyebrow">03 / FEATURED WORK</p>
+        <h2>Projects from the journey</h2>
+        <p>Selected work from the actual practice files in this portfolio.</p>
+      </div>
+      
+        <a class="project-card" href="CSS/Day9/index.html" target="_blank">
+          <div class="project-number">01</div><div class="project-icon">▦</div>
+          <div><span class="project-type">CSS PROJECT</span><h3>PDF Tools Interface</h3><p>iLovePDF-inspired interface practice with navigation, categories and responsive card layouts.</p><span class="view">View project ↗</span></div>
+        </a>
+    
+      </div>
+    </section>
 
-    <footer>
+    <section id="about" class="section-wrap section-block about-grid">
+      <div class="section-heading reveal"><p class="eyebrow">04 / ABOUT</p><h2>Curious. Consistent. Building.</h2></div>
+      <div class="about-copy reveal delay-one">
+        <p>I’m <strong>R. Dhinesh Kumar</strong>, a B.A. English Literature graduate/student building my technical foundation through hands-on Full Stack Development practice.</p>
+        <p>I prefer learning by creating: every day becomes a small experiment, and every project becomes proof of what I can do.</p>
+        <div class="skill-cloud"><span>HTML5</span><span>CSS3</span><span>Responsive Design</span><span>Flexbox</span><span>CSS Grid</span><span>Bootstrap</span><span>Tailwind CSS</span><span>Git</span></div>
+      </div>
+    </section>
 
-        <p>
-            © 2026 R. Dhinesh Kumar | Learning Portfolio
-        </p>
+    <section id="contact" class="contact section-wrap">
+      <div><p class="eyebrow">05 / CONTACT</p><h2>Let’s build something useful.</h2><p>For projects, collaboration or opportunities, connect with me online.</p></div>
+      <div class="contact-actions"><a class="btn primary" href="https://github.com/Dhineshk0430" target="_blank" rel="noopener">GitHub ↗</a><a class="btn secondary" href="https://www.linkedin.com/in/dhinesh-kumar-9815b12b0/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+    </section>
+  </main>
 
-    </footer>
-
+  <footer><p>© 2026 R. Dhinesh Kumar</p><a href="#home">Back to top ↑</a></footer>
 </body>
-
 </html>
