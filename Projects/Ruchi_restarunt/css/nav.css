@@ -1,0 +1,33 @@
+.page-header {
+  width: min(1160px, calc(100% - 32px));
+  min-height: 64px;
+  margin: 18px auto 0;
+  padding: 0 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 5;
+  color: var(--ink);
+  border: 1px solid rgba(67, 36, 26, .14);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .72);
+  box-shadow: 0 14px 35px rgba(67, 36, 26, .1);
+  backdrop-filter: blur(12px);
+}
+.page-header .brand { color: var(--brown); }
+.page-header .brand img { width: 40px; height: 40px; border: 2px solid var(--gold); }
+.page-header nav { display: flex; align-items: center; gap: 8px; }
+.page-header nav a { color: var(--brown); padding: 10px 12px; border-radius: 8px; text-decoration: none; font-size: 13px; font-weight: 700; transition: background .2s ease, color .2s ease; }
+.page-header nav a:hover { background: rgba(220, 107, 47, .12); color: var(--orange); }
+.page-header nav .nav-book { padding: 11px 18px; border: 1px solid var(--orange); background: var(--orange); color: white; }
+.page-header nav .nav-book:hover { background: #ed7d3f; color: white; }
+.page-header .nav-toggle { display: none; border: 0; background: transparent; color: var(--brown); font-size: 25px; cursor: pointer; }
+@media (max-width: 800px) {
+  .page-header { width: calc(100% - 20px); padding: 0 14px; }
+  .page-header .nav-toggle { display: block; }
+  .page-header nav { display: none; position: absolute; top: 72px; right: 0; min-width: 210px; padding: 10px; flex-direction: column; align-items: stretch; border-radius: 12px; background: rgba(67, 36, 26, .98); box-shadow: 0 14px 35px rgba(0, 0, 0, .2); }
+  .page-header nav.open { display: flex; }
+  .page-header nav a { color: white; }
+  .page-header nav .nav-book { text-align: center; }
+}

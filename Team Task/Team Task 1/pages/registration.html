@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rider Registration</title>
+</head>
+
+<body>
+   
+    <h1> Rider Registration</h1>
+
+    <p>Register yourself as a delivery rider.</p>
+
+    <hr>
+
+    <h2>How to Become a Rider</h2>
+
+    <ol>
+        <li>Check eligibility</li>
+        <li>Submit personal information</li>
+        <li>Provide required documents</li>
+        <li>Complete verification</li>
+        <li>Start delivery work</li>
+    </ol>
+
+    <hr>
+
+    <h2>Rider Registration Form</h2>
+
+    <section>
+     
+    <form>
+        <table>
+        
+       
+            <section>
+            <legend><strong>Personal Details</strong></legend>
+
+           
+             <label>Full Name:</label><br>
+            <input type="text" name="fullname" required>
+           
+            <br><br>
+
+            <label>Date of Birth:</label><br>
+            <input type="date" name="dob" required>
+            <br><br>
+
+            <label>Phone Number:</label><br>
+            <input type="tel" name="phone" required>
+            <br><br>
+
+            <label>Email:</label><br>
+            <input type="email" name="email">
+            <br><br>
+
+            <label>Address:</label><br>
+            <textarea name="address" rows="4" cols="40"></textarea>
+            <br><br>
+
+            <label>City:</label><br>
+            <input type="text" name="city" required>
+            </section>
+       
+
+        <br>
+
+        
+            <section>
+            <legend><strong>Vehicle Details</strong></legend> <br>
+
+            <label>Vehicle Type:</label><br>
+
+            <input type="radio" name="vehicle" value="bike">
+            <label>Bike</label>
+
+            <input type="radio" name="vehicle" value="scooter">
+            <label>Scooter</label>
+
+            <input type="radio" name="vehicle" value="bicycle">
+            <label>Bicycle</label>
+
+            <br><br>
+
+            <label>Vehicle Number:</label><br>
+            <input type="text" name="vehicle_number">
+            <br><br>
+
+            <label>Driving License Number:</label><br>
+            <input type="text" name="license_number">
+
+        </section>
+
+        <br>
+
+        <section>
+            <legend><strong>Document Details</strong></legend>
+
+            <label>ID Proof:</label><br>
+
+            <select name="id_proof">
+                <option value="">-- Select ID Proof --</option>
+                <option value="aadhaar">Aadhaar Card</option>
+                <option value="voter">Voter ID</option>
+                <option value="passport">Passport</option>
+            </select>
+
+            <br><br>
+
+            <label>ID Proof Number:</label><br>
+            <input type="text" name="id_number">
+            <br><br>
+
+            <label>Upload ID Proof:</label><br>
+            <input type="file" name="id_document">
+            <br><br>
+
+            <label>Upload Driving License:</label><br>
+            <input type="file" name="license_document">
+
+        </section>
+
+        <br>
+
+        <section>
+            <legend><strong>Working Preferences</strong></legend>
+
+            <label>Preferred Working Area:</label><br>
+            <input type="text" name="working_area">
+            <br><br>
+
+            <label>Preferred Working Hours:</label><br>
+
+            <input type="checkbox" name="morning">
+            <label>Morning</label><br>
+
+            <input type="checkbox" name="afternoon">
+            <label>Afternoon</label><br>
+
+            <input type="checkbox" name="evening">
+            <label>Evening</label><br>
+
+            <input type="checkbox" name="fulltime">
+            <label>Full Time</label>
+
+        </section>
+
+        <br>
+
+        <section>
+            <legend><strong>Declaration</strong></legend>
+
+            <input type="checkbox" required>
+
+            <label>
+                I confirm that the information provided by me is correct.
+            </label>
+
+        </section>
+
+        <br>
+
+        <input type="submit" value="Submit Registration">
+        <input type="reset" value="Reset">
+
+    
+    
+  </table>  
+</form>
+  
+    </section>
+
+    <hr>
+
+    <footer>
+        <p>© 2026 Rider Registration Project</p>
+    </footer>
+    
+
+</body>
+</html>
