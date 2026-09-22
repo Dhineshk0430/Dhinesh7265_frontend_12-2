@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Order History | Ruchi Restaurant</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <style>
+        .history-page { padding-block: 158px 90px; }
+        .history-heading { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 42px; }
+        .history-heading h1 { margin: 12px 0 0; font-size: clamp(44px, 6vw, 72px); line-height: .98; }
+        .history-heading h1 em { color: var(--orange); }
+        .history-heading p:last-child { max-width: 280px; margin: 0; color: #806d61; line-height: 1.6; }
+        .history-list { display: grid; gap: 14px; max-width: 860px; }
+        .history-card { display: grid; grid-template-columns: 1fr auto; gap: 20px; padding: 24px 26px; border: 1px solid rgba(67, 36, 26, .14); border-radius: 12px; background: rgba(255, 255, 255, .45); }
+        .history-card h2 { margin: 0 0 8px; font: 700 18px 'DM Sans', sans-serif; color: var(--brown); }
+        .history-card p { margin: 5px 0 0; color: #806d61; font-size: 13px; }
+        .history-card strong { color: var(--brown); font-size: 20px; }
+        .history-card time { display: block; color: var(--orange); font-size: 11px; font-weight: 700; letter-spacing: .1em; }
+        .history-empty { max-width: 620px; padding: 42px; border: 1px dashed rgba(67, 36, 26, .24); border-radius: 12px; text-align: center; }
+        .history-empty h2 { margin: 0 0 10px; }
+        .history-empty p { margin-bottom: 24px; color: #806d61; }
+        .history-empty .button { border-radius: 8px; }
+        @media (max-width: 800px) { .history-page { padding-top: 130px; } .history-heading { display: block; } .history-heading p:last-child { margin-top: 20px; } .history-card { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header class="page-header">
+        <a class="brand" href="index.html"><img src="assets/images/logo/logo.png" alt="Ruchi Restaurant"><span>Ruchi<small>RESTAURANT</small></span></a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+        <nav></nav>
+    </header>
+    <main class="wrap history-page">
+        <section class="history-heading"><div><p class="eyebrow">YOUR ORDERS</p><h1>Good food,<br><em>remembered.</em></h1></div><p>Your recent Ruchi orders, all in one place.</p></section>
+        <section id="historyList" class="history-list" aria-live="polite"></section>
+    </main>
+    <footer><div class="wrap footer-inner"><p>© 2026 Ruchi Restaurant</p></div></footer>
+    <script src="js/app.js"></script>
+    <script>
+        const historyList = document.querySelector('#historyList');
+        const orders = JSON.parse(localStorage.getItem('ruchi-order-history') || '[]');
+        if (!orders.length) {
+            historyList.innerHTML = '<div class="history-empty"><h2>No orders yet</h2><p>Your next delicious meal will appear here after checkout.</p><a class="button primary" href="menu.html">Explore the menu</a></div>';
+        } else {
+            historyList.innerHTML = orders.map(order => `<article class="history-card"><div><time>${order.date || 'Recent order'}</time><h2>${order.id}</h2><p>${(order.items || []).map(item => `${item.name} × ${item.qty}`).join(', ')}</p><p>Paid by ${order.method}</p></div><strong>₹${Number(order.total).toLocaleString('en-IN')}</strong></article>`).join('');
+        }
+    </script>
+</body>
+</html>

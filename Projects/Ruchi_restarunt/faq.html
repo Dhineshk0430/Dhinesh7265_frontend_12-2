@@ -1,1 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Answers to common questions about dining, bookings and orders at Ruchi Restaurant.">
+	<title>FAQ | Ruchi Restaurant</title>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/nav.css">
+	<style>
+		.faq-page { padding-bottom: 90px; }
+		.faq-hero { max-width: 760px; padding-bottom: 48px; }
+		.faq-hero h1 { margin: 12px 0 20px; font-size: clamp(48px, 7vw, 82px); line-height: .98; }
+		.faq-hero h1 em { color: var(--orange); }
+		.faq-hero p:last-child { max-width: 590px; color: #806d61; font-size: 17px; line-height: 1.7; }
+		.faq-layout { display: grid; grid-template-columns: 220px minmax(0, 760px); gap: clamp(36px, 8vw, 120px); align-items: start; }
+		.faq-note { padding-top: 8px; color: var(--brown); }
+		.faq-note strong { display: block; margin-bottom: 10px; font-family: 'Playfair Display', serif; font-size: 24px; }
+		.faq-note span { display: block; color: #806d61; font-size: 13px; line-height: 1.6; }
+		.faq-list { border-top: 1px solid rgba(67, 36, 26, .2); }
+		.faq-item { border-bottom: 1px solid rgba(67, 36, 26, .2); }
+		.faq-question { display: flex; align-items: center; justify-content: space-between; gap: 24px; width: 100%; padding: 23px 0; border: 0; background: transparent; color: var(--brown); font: 700 17px 'DM Sans', sans-serif; text-align: left; cursor: pointer; }
+		.faq-question span:last-child { display: grid; place-items: center; flex: 0 0 30px; width: 30px; height: 30px; border: 1px solid rgba(67, 36, 26, .22); border-radius: 50%; color: var(--orange); font-size: 20px; font-weight: 400; }
+		.faq-answer { display: none; max-width: 650px; padding: 0 54px 24px 0; color: #806d61; font-size: 15px; line-height: 1.7; }
+		.faq-item.open .faq-answer { display: block; }
+		.faq-item.open .faq-question span:last-child { background: var(--orange); color: white; }
+		.faq-cta { display: flex; align-items: center; justify-content: space-between; gap: 28px; margin-top: 78px; padding: 34px 38px; border-radius: 14px; background: var(--brown); color: white; }
+		.faq-cta h2 { margin: 0; font-size: clamp(26px, 4vw, 40px); }
+		.faq-cta p { margin: 6px 0 0; color: #e8d8cb; font-size: 14px; }
+		.faq-cta .button { flex: 0 0 auto; border-radius: 8px; }
+		@media (max-width: 800px) {
+			.faq-layout { grid-template-columns: 1fr; gap: 26px; }
+			.faq-note { padding-top: 0; }
+			.faq-cta { align-items: flex-start; flex-direction: column; padding: 28px; }
+		}
+	</style>
+</head>
+<body>
+	<header class="page-header">
+		<a class="brand" href="index.html"><img src="assets/images/logo/logo.png" alt="Ruchi Restaurant"><span>Ruchi<small>RESTAURANT</small></span></a>
+		<button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+		<nav>
+			<a href="about.html">Our story</a>
+			<a href="menu.html">Menu</a>
+			<a href="index.html#gallery">Gallery</a>
+			<a href="faq.html">FAQ</a>
+			<a href="cart.html">Cart <b data-cart-count>0</b></a>
+			<a class="nav-book" href="booking.html">Book a table</a>
+		</nav>
+	</header>
+
+	<main class="wrap section faq-page">
+		<section class="faq-hero">
+			<p class="eyebrow">WE ARE HERE TO HELP</p>
+			<h1>Good to know<br><em>before you visit.</em></h1>
+			<p>From booking a table to choosing the right dish, here are answers to the questions our guests ask most often.</p>
+		</section>
+
+		<section class="faq-layout">
+			<aside class="faq-note"><strong>Have a question?</strong><span>We love hearing from our guests. Find us at the table or call us during opening hours.</span></aside>
+			<div class="faq-list">
+				<article class="faq-item open">
+					<button class="faq-question" type="button" data-faq aria-expanded="true"><span>Do I need to reserve a table?</span><span>−</span></button>
+					<div class="faq-answer">Reservations are recommended for dinner, weekends and celebrations. You can request a table through our booking page, and our team will confirm availability shortly.</div>
+				</article>
+				<article class="faq-item">
+					<button class="faq-question" type="button" data-faq aria-expanded="false"><span>What are your opening hours?</span><span>+</span></button>
+					<div class="faq-answer">We are open every day from 11:00 AM to 11:00 PM. Our kitchen takes its last orders before closing, so please arrive with enough time to enjoy your meal.</div>
+				</article>
+				<article class="faq-item">
+					<button class="faq-question" type="button" data-faq aria-expanded="false"><span>Do you offer vegetarian options?</span><span>+</span></button>
+					<div class="faq-answer">Yes. Our menu includes a generous selection of vegetarian dishes, South Indian favourites, starters and desserts. Our team can also help you choose based on your preferences.</div>
+				</article>
+				<article class="faq-item">
+					<button class="faq-question" type="button" data-faq aria-expanded="false"><span>Can I order for delivery?</span><span>+</span></button>
+					<div class="faq-answer">Yes, you can add dishes to your order through the menu and complete checkout online. Delivery is free for orders above ₹499, with delivery charges calculated at checkout.</div>
+				</article>
+				<article class="faq-item">
+					<button class="faq-question" type="button" data-faq aria-expanded="false"><span>Can you accommodate large groups?</span><span>+</span></button>
+					<div class="faq-answer">We welcome family meals and celebrations. For larger groups, please use the booking form and mention your guest count and any seating requirements in the special request field.</div>
+				</article>
+				<article class="faq-item">
+					<button class="faq-question" type="button" data-faq aria-expanded="false"><span>Do you cater for celebrations?</span><span>+</span></button>
+					<div class="faq-answer">We do. Tell us about your celebration when you book, and our team will help make the occasion feel special, from the table setup to the food.</div>
+				</article>
+			</div>
+		</section>
+
+		<section class="faq-cta">
+			<div><h2>Ready to gather?</h2><p>Make your next meal one worth remembering.</p></div>
+			<a class="button primary" href="booking.html">Book a table</a>
+		</section>
+	</main>
+	<footer><div class="wrap footer-inner"><p>© 2026 Ruchi Restaurant</p></div></footer>
+	<script src="js/app.js"></script>
+</body>
+</html>
 

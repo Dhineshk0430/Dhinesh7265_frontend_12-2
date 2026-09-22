@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign In | Ruchi Restaurant</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <style>
+        .account-page { min-height: 620px; display: grid; place-items: center; padding-block: 150px 80px; }
+        .account-card { width: min(100%, 480px); padding: 42px; border: 1px solid rgba(67, 36, 26, .14); border-radius: 16px; background: rgba(255, 255, 255, .48); box-shadow: 0 16px 38px rgba(67, 36, 26, .07); }
+        .account-card h1 { margin: 12px 0 12px; font-size: clamp(40px, 6vw, 58px); line-height: .98; }
+        .account-card h1 em { color: var(--orange); }
+        .account-card > p:not(.eyebrow) { color: #806d61; line-height: 1.6; }
+        .account-form { display: grid; gap: 16px; margin-top: 28px; }
+        .account-form label { display: grid; gap: 7px; color: var(--brown); font-size: 12px; font-weight: 700; }
+        .account-form input { padding: 13px 14px; border: 1px solid rgba(67, 36, 26, .22); border-radius: 7px; background: rgba(255, 255, 255, .72); color: var(--ink); font: inherit; }
+        .account-form input:focus { outline: 2px solid rgba(220, 107, 47, .25); border-color: var(--orange); }
+        .account-form .button { margin-top: 6px; border-radius: 8px; }
+        .account-message { min-height: 20px; margin: 0; color: var(--orange); font-size: 13px; }
+        @media (max-width: 800px) { .account-card { padding: 28px; } }
+    </style>
+</head>
+<body>
+    <header class="page-header">
+        <a class="brand" href="index.html"><img src="assets/images/logo/logo.png" alt="Ruchi Restaurant"><span>Ruchi<small>RESTAURANT</small></span></a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+        <nav></nav>
+    </header>
+    <main class="wrap account-page">
+        <section class="account-card">
+            <p class="eyebrow">WELCOME BACK</p>
+            <h1>Sign in to<br><em>your Ruchi.</em></h1>
+            <p>Save your details and keep your orders easy to find.</p>
+            <form class="account-form" id="loginForm">
+                <label>Email address<input required type="email" name="email" placeholder="you@example.com" autocomplete="email"></label>
+                <label>Password<input required type="password" name="password" placeholder="Enter your password" minlength="6" autocomplete="current-password"></label>
+                <button class="button primary" type="submit">Sign in</button>
+                <p class="account-message" id="loginMessage" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+    <footer><div class="wrap footer-inner"><p>© 2026 Ruchi Restaurant</p></div></footer>
+    <script src="js/app.js"></script>
+    <script>
+        document.querySelector('#loginForm').addEventListener('submit', event => {
+            event.preventDefault();
+            const email = new FormData(event.currentTarget).get('email');
+            localStorage.setItem('ruchi-user', JSON.stringify({ email }));
+            document.querySelector('#loginMessage').textContent = 'You are signed in. Your order history is ready.';
+            setTimeout(() => { location.href = 'history.html'; }, 500);
+        });
+    </script>
+</body>
+</html>

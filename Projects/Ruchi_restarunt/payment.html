@@ -1,1 +1,77 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Payment | Ruchi</title><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"></head><body><header class="page-header"><a class="brand" href="index.html"><img src="assets/images/logo/logo.png" alt="Ruchi"><span>Ruchi<small>RESTAURANT</small></span></a><nav><a href="menu.html">Menu</a><a href="cart.html">Your order</a></nav></header><main class="wrap section payment-wrap"><section><p class="eyebrow">SECURE CHECKOUT</p><h1>One last step<br><em>to something delicious.</em></h1><p class="payment-total">Amount due <b data-cart-total>₹0</b></p></section><form id="paymentForm" class="payment-form"><h2>Choose payment method</h2><label class="payment-option"><input required type="radio" name="payment" value="UPI" checked><span><b>UPI</b><small>Pay with any UPI app</small></span></label><input class="payment-input" required placeholder="yourname@upi"><label class="payment-option"><input type="radio" name="payment" value="Card"><span><b>Card</b><small>Debit or credit card</small></span></label><label class="payment-option"><input type="radio" name="payment" value="Cash on Delivery"><span><b>Cash on delivery</b><small>Pay when your order arrives</small></span></label><button class="button primary">Pay securely</button></form></main><footer><div class="wrap footer-inner"><p>© 2026 Ruchi Restaurant</p></div></footer><script src="js/app.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Payment | Ruchi</title>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/nav.css">
+	<style>
+		.payment-wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(420px, 520px); gap: clamp(38px, 8vw, 110px); align-items: center; min-height: 620px; }
+		.payment-visual { min-height: 430px; padding: 28px; display: flex; align-items: end; border-radius: 16px; background: linear-gradient(180deg, transparent 32%, rgba(31, 16, 10, .8)), url('assets/images/img/table.png') center / cover; color: white; box-shadow: 0 18px 40px rgba(67, 36, 26, .14); }
+	.payment-visual h1 { max-width: 460px; margin: 0; font-size: clamp(48px, 6vw, 76px); line-height: .98; }
+	.payment-visual h1 em { color: var(--gold); }
+	.payment-visual p { margin: 12px 0 0; color: #f2e4d7; line-height: 1.6; }
+	.payment-form { padding: clamp(24px, 4vw, 42px); border: 1px solid rgba(67, 36, 26, .14); border-radius: 16px; background: rgba(255, 255, 255, .48); box-shadow: 0 16px 38px rgba(67, 36, 26, .07); }
+	.payment-form h2 { margin-bottom: 8px; font-size: 32px; }
+	.payment-intro { margin-bottom: 24px; color: #806d61; font-size: 14px; }
+	.payment-options { display: grid; gap: 10px; }
+	.payment-option { display: flex; align-items: center; gap: 12px; padding: 15px; border: 1px solid rgba(67, 36, 26, .16); border-radius: 10px; background: rgba(255, 255, 255, .5); cursor: pointer; }
+	.payment-option:has(input:checked) { border-color: var(--orange); background: rgba(220, 107, 47, .08); box-shadow: 0 0 0 2px rgba(220, 107, 47, .1); }
+	.payment-option input { accent-color: var(--orange); }
+	.payment-icon { display: grid; place-items: center; width: 48px; height: 34px; border-radius: 6px; background: var(--brown); color: var(--gold); font-size: 10px; font-weight: 700; letter-spacing: .08em; }
+	.payment-option b, .payment-option small { display: block; }
+	.payment-option small { margin-top: 3px; color: #806d61; font-size: 12px; }
+	.upi-field { margin: 18px 0 22px; }
+	.upi-field label { display: block; margin-bottom: 7px; font-size: 12px; font-weight: 700; }
+	.payment-input { width: 100%; padding: 13px 14px; border: 1px solid rgba(67, 36, 26, .22); border-radius: 7px; background: rgba(255, 255, 255, .72); color: var(--ink); font: inherit; }
+	.payment-input:focus { outline: 2px solid rgba(220, 107, 47, .25); border-color: var(--orange); }
+	.payment-form > .button { width: 100%; border-radius: 8px; }
+		@media (max-width: 800px) { .payment-wrap { grid-template-columns: 1fr; min-height: auto; padding-top: 36px; } .payment-visual { min-height: 300px; } }
+	</style>
+</head>
+<body>
+	<header class="page-header">
+		<a class="brand" href="index.html"><img src="assets/images/logo/logo.png" alt="Ruchi Restaurant"><span>Ruchi<small>RESTAURANT</small></span></a>
+		<button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+		<nav><a href="menu.html">Menu</a><a href="cart.html">Your order</a></nav>
+	</header>
+	<main class="wrap section payment-wrap">
+		<section class="payment-visual">
+			<div><p class="eyebrow light">A LOVELY MEAL AWAITS</p><h1>Set the table for <em>something delicious.</em></h1><p>One secure step and your Ruchi favourites will be on their way.</p></div>
+		</section>
+		<form id="paymentForm" class="payment-form">
+			<h2>Choose payment method</h2>
+			<p class="payment-intro">Select how you would like to complete your order.</p>
+			<div class="payment-options">
+				<label class="payment-option"><input type="radio" name="payment" value="UPI" checked><span class="payment-icon">UPI</span><span><b>UPI</b><small>Pay with any UPI app</small></span></label>
+				<label class="payment-option"><input type="radio" name="payment" value="Card"><span class="payment-icon">CARD</span><span><b>Card</b><small>Debit or credit card</small></span></label>
+				<label class="payment-option"><input type="radio" name="payment" value="Cash on Delivery"><span class="payment-icon">COD</span><span><b>Cash on delivery</b><small>Pay when your order arrives</small></span></label>
+			</div>
+			<div class="upi-field"><label for="upiId">UPI ID</label><input id="upiId" class="payment-input" placeholder="yourname@upi" autocomplete="off"></div>
+			<button class="button primary" type="submit">Pay securely</button>
+		</form>
+	</main>
+	<footer><div class="wrap footer-inner"><p>© 2026 Ruchi Restaurant</p></div></footer>
+	<script src="js/app.js"></script>
+	<script>
+	const paymentForm = document.querySelector('#paymentForm');
+	const upiField = document.querySelector('.upi-field');
+	const upiInput = document.querySelector('#upiId');
+		const paymentChoices = document.querySelectorAll('input[name="payment"]');
+		function updatePaymentFields() {
+			const isUpi = document.querySelector('input[name="payment"]:checked')?.value === 'UPI';
+			upiField.hidden = !isUpi;
+			upiInput.required = isUpi;
+			if (!isUpi) upiInput.value = '';
+		}
+	paymentChoices.forEach(choice => choice.addEventListener('change', updatePaymentFields));
+	updatePaymentFields();
+	paymentForm.addEventListener('submit', event => {
+			const isUpi = document.querySelector('input[name="payment"]:checked')?.value === 'UPI';
+			if (isUpi && !upiInput.value.trim()) { event.preventDefault(); upiInput.reportValidity(); }
+		});
+	</script>
+</body>
+</html>

@@ -1,96 +1,254 @@
-I<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ruchi Restaurant — authentic Indian flavours, warmly served.">
-  <title>Ruchi Restaurant | Authentic Indian Dining</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <style>
-    .site-header {
-      top: 18px;
-      height: 64px;
-      padding: 0 22px;
-      width: min(1160px, calc(100% - 32px));
-      left: 50%;
-      transform: translateX(-50%);
-      border: 1px solid rgba(255, 255, 255, .24);
-      border-radius: 14px;
-      background: rgba(31, 16, 10, .58);
-      box-shadow: 0 14px 35px rgba(0, 0, 0, .18);
-      backdrop-filter: blur(12px);
-    }
-    .brand { gap: 11px; }
-    .brand img { width: 40px; height: 40px; border: 2px solid #e9b75b; }
-    .nav-links { gap: 8px; }
-    .nav-links a { padding: 10px 12px; border-radius: 8px; transition: background .2s ease, color .2s ease; }
-    .nav-links a:hover { background: rgba(233, 183, 91, .18); color: #f3bf74; }
-    .nav-links .nav-book { padding: 11px 18px; border-color: #e9b75b; background: #dc6b2f; color: #fff; }
-    .nav-links .nav-book:hover { background: #ed7d3f; color: #fff; }
-    .button { border-radius: 8px; }
-    .about-photo { overflow: hidden; border-radius: 14px; }
-    .about-photo > img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
-    .photo-note { border-radius: 0 0 12px 0; }
-    .flavour-band { padding-block: 54px; }
-    .flavour-band .band-grid { align-items: center; }
-    .flavour-band .band-grid > div { align-self: center; }
-    .flavour-band h2, .flavour-band p { margin-bottom: 0; }
-    .promise-list { margin-bottom: 0; }
-    .dish { overflow: hidden; border-radius: 10px; }
-    .dish > img { width: 100%; height: 205px; object-fit: cover; object-position: center; }
-    .special { align-items: stretch; }
-    .special-image { line-height: 0; }
-    .special-image, .special-image img { height: 100%; }
-    .special-image img { width: 100%; object-fit: cover; }
-    .gallery-grid { gap: 16px; }
-    .gallery-grid img { border-radius: 10px; object-fit: cover; }
-    .booking-form { background: color-mix(in srgb, var(--cream) 72%, white); border: 1px solid rgba(67, 36, 26, .12); }
-    .hero-image { object-position: center 54%; }
-    .hero-shade { background: linear-gradient(90deg, rgba(20, 10, 6, .9) 0%, rgba(20, 10, 6, .58) 42%, rgba(20, 10, 6, .1) 78%); }
-    @media (max-width: 800px) {
-      .site-header { top: 10px; width: calc(100% - 20px); padding: 0 14px; }
-      .nav-links { top: 72px; right: 0; border-radius: 12px; background: rgba(31, 16, 10, .96); }
-      .hero-content { padding-top: 70px; }
-      .flavour-band { padding-block: 42px; }
-      .special-image, .special-image img { height: auto; }
-      .booking-form { width: 100%; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ruchi Restaurant — authentic Indian flavours, warmly served.">
+    <title>Ruchi Restaurant | Authentic Indian Dining</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .site-header {
+          top: 18px;
+          height: 64px;
+          padding: 0 22px;
+          width: min(1160px, calc(100% - 32px));
+          left: 50%;
+          position: fixed;
+          z-index: 1000;
+          transform: translateX(-50%);
+          border: 1px solid rgba(255, 255, 255, .24);
+          border-radius: 14px;
+          background: rgba(31, 16, 10, .58);
+          box-shadow: 0 14px 35px rgba(0, 0, 0, .18);
+          backdrop-filter: blur(12px);
+        }
+        .brand { gap: 11px; }
+        .brand img { width: 40px; height: 40px; border: 2px solid #e9b75b; }
+        .nav-links { gap: 8px; }
+        .nav-links a { padding: 10px 12px; border-radius: 8px; transition: background .2s ease, color .2s ease; }
+        .nav-links a:hover { background: rgba(233, 183, 91, .18); color: #f3bf74; }
+        .nav-links .nav-book { padding: 11px 18px; border-color: #e9b75b; background: #dc6b2f; color: #fff; }
+        .nav-links .nav-book:hover { background: #ed7d3f; color: #fff; }
+        .button { border-radius: 8px; }
+        .about-photo { overflow: hidden; border-radius: 14px; }
+        .about-photo > img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+        .photo-note { border-radius: 0 0 12px 0; }
+        .flavour-band { padding-block: 54px; }
+        .flavour-band .band-grid { align-items: center; }
+        .flavour-band .band-grid > div { align-self: center; }
+        .flavour-band h2, .flavour-band p { margin-bottom: 0; }
+        .promise-list { margin-bottom: 0; }
+        .dish { overflow: hidden; border-radius: 10px; }
+        .dish > img { width: 100%; height: 205px; object-fit: cover; object-position: center; }
+        .special { align-items: stretch; }
+        .special-image { line-height: 0; }
+        .special-image, .special-image img { height: 100%; }
+        .special-image img { width: 100%; object-fit: cover; }
+        .gallery-grid { gap: 16px; }
+        .gallery-grid img { border-radius: 10px; object-fit: cover; }
+        .booking-form { background: color-mix(in srgb, var(--cream) 72%, white); border: 1px solid rgba(67, 36, 26, .12); }
+        .hero-image { object-position: center 54%; }
+        .hero-shade { background: linear-gradient(90deg, rgba(20, 10, 6, .9) 0%, rgba(20, 10, 6, .58) 42%, rgba(20, 10, 6, .1) 78%); }
+        @media (max-width: 800px) {
+          .site-header { top: 10px; width: calc(100% - 20px); padding: 0 14px; }
+          .nav-links { top: 72px; right: 0; border-radius: 12px; background: rgba(31, 16, 10, .96); }
+          .hero-content { padding-top: 70px; }
+          .flavour-band { padding-block: 42px; }
+          .special-image, .special-image img { height: auto; }
+          .booking-form { width: 100%; }
+        }
+    </style>
 </head>
+
 <body>
-  <header class="site-header" id="top">
-    <a class="brand" href="#top"><img src="assets/images/logo/logo.png" alt="Ruchi Restaurant logo"><span>Ruchi <small>RESTAURANT</small></span></a>
-    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
-    <nav class="nav-links"><a href="about.html">Our story</a><a href="menu.html">Menu</a><a href="#gallery">Gallery</a><a href="faq.html">FAQ</a><a href="cart.html">Cart <b data-cart-count>0</b></a><a class="nav-book" href="booking.html">Book a table</a></nav>
-  </header>
+    <header class="site-header" id="top">
+        <a class="brand" href="#top"><img src="assets/images/logo/logo.png" alt="Ruchi Restaurant logo"><span>Ruchi <small>RESTAURANT</small></span></a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+        <nav class="nav-links"><a href="#about">Our story</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a href="faq.html">FAQ</a><a href="history.html">Order history</a><a href="login.html">Sign in</a><a href="cart.html">Cart <b data-cart-count>0</b></a><a class="nav-book" href="#booking">Book a table</a></nav>
+    </header>
 
-  <main>
-    <section class="hero">
-      <img class="hero-image" src="assets/images/img/signature dish.png" alt="Ruchi signature chicken biryani">
-      <div class="hero-shade"></div>
-      <div class="hero-content"><p class="eyebrow light">AUTHENTIC INDIAN KITCHEN</p><h1>Food made for<br><em>coming together.</em></h1><p class="hero-copy">Generous plates, treasured recipes and the unmistakable warmth of home — thoughtfully prepared at Ruchi.</p><div class="hero-actions"><a class="button primary" href="menu.html">Explore the menu</a><a class="button ghost" href="booking.html">Reserve a table</a></div><div class="hero-notes"><span>★ 4.8 guest rating</span><span>Fresh every day</span><span>Est. 2014</span></div></div>
-      <a class="scroll-cue" href="#about">SCROLL TO DISCOVER <b>↓</b></a>
-    </section>
+    <main>
+        <section class="hero">
+            <img class="hero-image" src="assets/images/img/signature dish.png" alt="Ruchi signature chicken biryani">
+            <div class="hero-shade"></div>
+            <div class="hero-content">
+                <p class="eyebrow light">AUTHENTIC INDIAN KITCHEN</p>
+                <h1>Food made for<br><em>coming together.</em></h1>
+                <p class="hero-copy">Generous plates, treasured recipes and the unmistakable warmth of home — thoughtfully prepared at Ruchi.</p>
+                <div class="hero-actions"><a class="button primary" href="menu.html">Explore the menu</a><a class="button ghost" href="booking.html">Reserve a table</a></div>
+                <div class="hero-notes"><span>★ 4.8 guest rating</span><span>Fresh every day</span><span>Est. 2014</span></div>
+            </div>
+            <a class="scroll-cue" href="#about">SCROLL TO DISCOVER <b>↓</b></a>
+        </section>
 
-    <section class="about wrap section" id="about"><div class="about-photo"><img src="assets/images/img/Interior.jpeg" alt="Warm Ruchi Restaurant interior"><div class="photo-note"><b>10+</b><span>years of<br>flavour</span></div></div><div class="about-copy"><p class="eyebrow">OUR STORY</p><h2>A little warmth in every <em>serving.</em></h2><p>Ruchi is a celebration of the flavours that turn an everyday meal into time well spent. Our kitchen brings together time-honoured Indian recipes, honest ingredients and a generous spirit of hospitality.</p><p>Come for a crisp dosa, stay for a fragrant biryani, and leave with the feeling of having been well looked after.</p><div class="stats"><div><b>50+</b><span>signature dishes</span></div><div><b>10K+</b><span>happy guests</span></div><div><b>20+</b><span>passionate team</span></div></div><a href="booking.html" class="text-link">Meet us at the table <span>→</span></a></div></section>
+        <section class="about wrap section" id="about">
+            <div class="about-photo"><img src="assets/images/img/Interior.jpeg" alt="Warm Ruchi Restaurant interior">
+                <div class="photo-note"><b>10+</b><span>years of<br>flavour</span></div>
+            </div>
+            <div class="about-copy">
+                <p class="eyebrow">OUR STORY</p>
+                <h2>A little warmth in every <em>serving.</em></h2>
+                <p>Ruchi is a celebration of the flavours that turn an everyday meal into time well spent. Our kitchen brings together time-honoured Indian recipes, honest ingredients and a generous spirit of hospitality.</p>
+                <p>Come for a crisp dosa, stay for a fragrant biryani, and leave with the feeling of having been well looked after.</p>
+                <div class="stats">
+                    <div><b>50+</b><span>signature dishes</span></div>
+                    <div><b>10K+</b><span>happy guests</span></div>
+                    <div><b>20+</b><span>passionate team</span></div>
+                </div><a href="booking.html" class="text-link">Meet us at the table <span>→</span></a></div>
+        </section>
 
-    <section class="flavour-band"><div class="wrap band-grid"><p class="eyebrow light">THE RUCHI PROMISE</p><h2>Traditional flavours.<br><em>Beautifully shared.</em></h2><div><p>Every dish begins with freshly chosen ingredients and a recipe worth passing on.</p><div class="promise-list"><span>✦ Expert chefs</span><span>✦ Fresh ingredients</span><span>✦ Cooked with care</span></div></div></div></section>
+        <section class="flavour-band">
+            <div class="wrap band-grid">
+                <p class="eyebrow light">THE RUCHI PROMISE</p>
+                <h2>Traditional flavours.<br><em>Beautifully shared.</em></h2>
+                <div>
+                    <p>Every dish begins with freshly chosen ingredients and a recipe worth passing on.</p>
+                    <div class="promise-list"><span>✦ Expert chefs</span><span>✦ Fresh ingredients</span><span>✦ Cooked with care</span></div>
+                </div>
+            </div>
+        </section>
 
-    <section class="section wrap" id="menu"><div class="section-heading"><div><p class="eyebrow">FROM OUR KITCHEN</p><h2>Something delicious<br><em>for everyone.</em></h2></div><p>Explore a few guest favourites — from rich, slow-cooked classics to bright South Indian comfort food.</p></div><div class="menu-controls" role="group" aria-label="Filter food menu"><button class="filter active" data-filter="all">All dishes</button><button class="filter" data-filter="main">Main course</button><button class="filter" data-filter="south">South Indian</button><button class="filter" data-filter="starter">Starters</button><button class="filter" data-filter="dessert">Desserts</button></div><div class="menu-grid" id="menuGrid"></div><div class="menu-bottom"><p>Free delivery on orders above ₹499</p><button class="button dark" id="openCart" data-open-cart type="button">View your order <span id="cartCount">0</span></button><a class="text-link" href="menu.html">See the full menu <span>→</span></a></div></section>
+        <section class="section wrap" id="menu">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">FROM OUR KITCHEN</p>
+                    <h2>Something delicious<br><em>for everyone.</em></h2></div>
+                <p>Explore a few guest favourites — from rich, slow-cooked classics to bright South Indian comfort food.</p>
+            </div>
+            <div class="menu-controls" role="group" aria-label="Filter food menu">
+                <button class="filter active" data-filter="all">All dishes</button>
+                <button class="filter" data-filter="main">Main course</button>
+                <button class="filter" data-filter="south">South Indian</button>
+                <button class="filter" data-filter="starter">Starters</button>
+                <button class="filter" data-filter="dessert">Desserts</button>
+            </div>
+            <div class="menu-grid" id="menuGrid"></div>
+            <div class="menu-bottom">
+                <p>Free delivery on orders above ₹499</p>
+                <button class="button dark" id="openCart" type="button">View your order <span id="cartCount">0</span></button></div>
+        </section>
 
-    <section class="special" id="experience"><div class="special-image"><img src="assets/images/img/special_dish.jpeg" alt="Ruchi special chicken biryani"></div><div class="special-copy"><p class="eyebrow light">CHEF'S SIGNATURE</p><h2>Ruchi Special<br><em>Chicken Biryani</em></h2><div class="rating">★★★★★ <span>4.9 / 5 guest favourite</span></div><p>Fragrant basmati rice, tender chicken and aromatic spices are layered slowly with our chef’s own recipe. This is the dish our regulars return for.</p><div class="price-row"><b>₹250</b><button class="button primary add-special">Add to order</button></div></div></section>
+        <section class="special" id="experience">
+            <div class="special-image"><img src="assets/images/img/special_dish.jpeg" alt="Ruchi special chicken biryani"></div>
+            <div class="special-copy">
+                <p class="eyebrow light">CHEF'S SIGNATURE</p>
+                <h2>Ruchi Special<br><em>Chicken Biryani</em></h2>
+                <div class="rating">★★★★★ <span>4.9 / 5 guest favourite</span></div>
+                <p>Fragrant basmati rice, tender chicken and aromatic spices are layered slowly with our chef’s own recipe. This is the dish our regulars return for.</p>
+                <div class="price-row"><b>₹250</b>
+                    <button class="button primary add-special">Add to order</button>
+                </div>
+            </div>
+        </section>
 
-    <section class="section wrap" id="gallery"><div class="section-heading"><div><p class="eyebrow">THE RUCHI MOMENT</p><h2>More than a meal.<br><em>A place to belong.</em></h2></div><p>Gather for a family meal, a quick catch-up, or a celebration worth remembering.</p></div><div class="gallery-grid"><img class="gallery-big" src="assets/images/img/Interior.jpeg" alt="Warm Ruchi Restaurant interior"><img src="assets/images/img/chef.jpeg" alt="Chef preparing a Ruchi dish"><img src="assets/images/img/south_indian_special.jpeg" alt="South Indian dishes at Ruchi"><img src="assets/images/img/starters.jpeg" alt="Ruchi starters"><img src="assets/images/img/deserts2.jpeg" alt="Ruchi desserts"></div></section>
+        <section class="section wrap" id="gallery">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">THE RUCHI MOMENT</p>
+                    <h2>More than a meal.<br><em>A place to belong.</em></h2></div>
+                <p>Gather for a family meal, a quick catch-up, or a celebration worth remembering.</p>
+            </div>
+            <div class="gallery-grid"><img class="gallery-big" src="assets/images/img/Interior.jpeg" alt="Warm Ruchi Restaurant interior"><img src="assets/images/img/chef.jpeg" alt="Chef preparing a Ruchi dish"><img src="assets/images/img/south_indian_special.jpeg" alt="South Indian dishes at Ruchi">
+                <img
+                src="assets/images/img/starters.jpeg" alt="Ruchi starters"><img src="assets/images/img/deserts2.jpeg" alt="Ruchi desserts"></div>
+        </section>
 
-    <section class="testimonials"><div class="wrap"><p class="eyebrow">FROM OUR GUESTS</p><h2>“The kind of food you<br><em>want to tell people about.”</em></h2><div class="review-grid"><article><div>★★★★★</div><p>“The biryani was wonderfully fragrant and the team made our family dinner feel so special.”</p><b>Ananya Rao</b><small>FAMILY DINING</small></article><article><div>★★★★★</div><p>“Crisp ghee roast, excellent service and a calm, beautiful dining room. We’ll be back.”</p><b>Rahul Menon</b><small>WEEKEND LUNCH</small></article><article><div>★★★★★</div><p>“Our catering order was spot-on. Every guest asked where the food came from.”</p><b>Priya Sharma</b><small>CELEBRATION EVENT</small></article></div></div></section>
+        <section class="testimonials">
+            <div class="wrap">
+                <p class="eyebrow">FROM OUR GUESTS</p>
+                <h2>“The kind of food you<br><em>want to tell people about.”</em></h2>
+                <div class="review-grid">
+                    <article>
+                        <div>★★★★★</div>
+                        <p>“The biryani was wonderfully fragrant and the team made our family dinner feel so special.”</p><b>Ananya Rao</b><small>FAMILY DINING</small></article>
+                    <article>
+                        <div>★★★★★</div>
+                        <p>“Crisp ghee roast, excellent service and a calm, beautiful dining room. We’ll be back.”</p><b>Rahul Menon</b><small>WEEKEND LUNCH</small></article>
+                    <article>
+                        <div>★★★★★</div>
+                        <p>“Our catering order was spot-on. Every guest asked where the food came from.”</p><b>Priya Sharma</b><small>CELEBRATION EVENT</small></article>
+                </div>
+            </div>
+        </section>
 
-    <section class="booking wrap section" id="booking"><div class="booking-copy"><p class="eyebrow">YOUR TABLE AWAITS</p><h2>Make room for<br><em>a great evening.</em></h2><p>Whether it’s a family dinner, a date or a joyful celebration, we’ll make your time at Ruchi feel special.</p><div class="contact-mini"><span>OPEN DAILY</span><b>11:00 AM — 11:00 PM</b><span>CALL US</span><b>+91 98765 43210</b></div></div><form class="booking-form" id="bookingForm"><h3>Reserve your table</h3><div class="form-row"><label>Your name<input required name="name" placeholder="Name"></label><label>Phone number<input required name="phone" inputmode="numeric" placeholder="10-digit number"></label></div><div class="form-row"><label>Date<input required name="date" type="date"></label><label>Guests<select required name="guests"><option value="">Select</option><option>2 guests</option><option>3–4 guests</option><option>5–6 guests</option><option>7+ guests</option></select></label></div><label>Special request <textarea name="note" placeholder="Celebration, seating preference, or anything else?"></textarea></label><button class="button primary" type="submit">Check availability</button><p class="form-message" id="bookingMessage" aria-live="polite"></p></form></section>
+        <section class="booking wrap section" id="booking">
+            <div class="booking-copy">
+                <p class="eyebrow">YOUR TABLE AWAITS</p>
+                <h2>Make room for<br><em>a great evening.</em></h2>
+                <p>Whether it’s a family dinner, a date or a joyful celebration, we’ll make your time at Ruchi feel special.</p>
+                <div class="contact-mini"><span>OPEN DAILY</span><b>11:00 AM — 11:00 PM</b><span>CALL US</span><b>+91 98765 43210</b></div>
+            </div>
+            <form class="booking-form" id="bookingForm">
+                <h3>Reserve your table</h3>
+                <div class="form-row">
+                    <label>Your name
+                        <input required name="name" placeholder="Name">
+                    </label>
+                    <label>Phone number
+                        <input required name="phone" inputmode="numeric" placeholder="10-digit number">
+                    </label>
+                </div>
+                <div class="form-row">
+                    <label>Date
+                        <input required name="date" type="date">
+                    </label>
+                    <label>Guests
+                        <select required name="guests">
+                            <option value="">Select</option>
+                            <option>2 guests</option>
+                            <option>3–4 guests</option>
+                            <option>5–6 guests</option>
+                            <option>7+ guests</option>
+                        </select>
+                    </label>
+                </div>
+                <label>Special request
+                    <textarea name="note" placeholder="Celebration, seating preference, or anything else?"></textarea>
+                </label>
+                <button class="button primary" type="submit">Check availability</button>
+                <p class="form-message" id="bookingMessage" aria-live="polite"></p>
+            </form>
+        </section>
 
-    <section class="contact-section" id="contact"><div class="wrap contact-grid"><div><p class="eyebrow light">VISIT RUCHI</p><h2>Bring your<br><em>appetite.</em></h2></div><div class="contact-details"><p><b>Call</b>+91 98765 43210</p><p><b>Email</b>hello@ruchirestaurant.in</p><p><b>Find us</b>123 Flavor Street, Chennai</p></div><a href="#top" class="back-top">BACK TO TOP ↑</a></div></section>
-  </main>
+        <section class="contact-section" id="contact">
+            <div class="wrap contact-grid">
+                <div>
+                    <p class="eyebrow light">VISIT RUCHI</p>
+                    <h2>Bring your<br><em>appetite.</em></h2></div>
+                <div class="contact-details">
+                    <p><b>Call</b>+91 98765 43210</p>
+                    <p><b>Email</b>hello@ruchirestaurant.in</p>
+                    <p><b>Find us</b>123 Flavor Street, Chennai</p>
+                </div><a href="#top" class="back-top">BACK TO TOP ↑</a></div>
+        </section>
+    </main>
 
-  <aside class="cart" id="cart" aria-label="Your order"><div class="cart-head"><div><p class="eyebrow">YOUR ORDER</p><h2>Good choice.</h2></div><button id="closeCart" aria-label="Close cart" type="button">×</button></div><div id="cartItems" class="cart-items"><p class="empty-cart">Your cart is waiting for something delicious.</p></div><div class="cart-total"><span>Subtotal</span><b id="cartTotal">₹0</b></div><button class="button primary checkout" id="checkout" data-checkout type="button">Proceed to payment</button></aside><div class="cart-backdrop" id="cartBackdrop"></div>
-  <footer><div class="wrap footer-inner"><a class="brand" href="#top"><img src="assets/images/logo/logo.png" alt="Ruchi Restaurant logo"><span>Ruchi <small>RESTAURANT</small></span></a><p>Authentic Indian food, thoughtfully served.</p><p>© 2026 Ruchi Restaurant</p></div></footer>
-  <script src="js/app.js"></script>
-</body></html>
+    <aside class="cart" id="cart" aria-label="Your order">
+        <div class="cart-head">
+            <div>
+                <p class="eyebrow">YOUR ORDER</p>
+                <h2>Good choice.</h2></div>
+            <button id="closeCart" aria-label="Close cart" type="button">×</button>
+        </div>
+        <div id="cartItems" class="cart-items">
+            <p class="empty-cart">Your cart is waiting for something delicious.</p>
+        </div>
+        <div class="cart-total"><span>Subtotal</span><b id="cartTotal">₹0</b></div>
+        <button class="button primary checkout" id="checkout" data-checkout type="button">Proceed to payment</button>
+    </aside>
+    <div class="cart-backdrop" id="cartBackdrop"></div>
+    <footer>
+        <div class="wrap footer-inner">
+            <a class="brand" href="#top"><img src="assets/images/logo/logo.png" alt="Ruchi Restaurant logo"><span>Ruchi <small>RESTAURANT</small></span></a>
+            <p>Authentic Indian food, thoughtfully served.</p>
+            <p>© 2026 Ruchi Restaurant</p>
+        </div>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
