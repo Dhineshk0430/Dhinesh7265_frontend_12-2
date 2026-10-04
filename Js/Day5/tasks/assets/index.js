@@ -119,7 +119,7 @@ for(a=1; a<=10; a++){
 // task10
 var total = 0
 for (a=1; a<=10; a++){
-    total = total + a;
+    total += a;
     
 }
 console.log("Total=" +total);
