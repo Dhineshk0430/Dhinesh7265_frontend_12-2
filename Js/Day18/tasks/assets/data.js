@@ -1,12 +1,16 @@
+const createCounter = () => {
+    let count = 0;
 
+    return () => {
+        count += 10;
+        console.log(count);
+    };
+};
 
-const titleName = document.getElementById(title)
+const counter = createCounter();
 
-title.innerHTML =  " this is class tasks"
-
-const paradata = document.querySelector("#paraone")
-
-paraone.textContent = " Task Done view through console using F12"
-
-
-const images =  
+counter();
+counter();
+counter();
+counter();
+counter();
