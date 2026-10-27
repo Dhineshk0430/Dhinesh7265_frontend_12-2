@@ -5,8 +5,8 @@ if (registerForm) {
     registerForm.addEventListener("submit", (event) => {
         event.preventDefault();
 
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
 
         let users = JSON.parse(localStorage.getItem("users")) || [];
@@ -24,6 +24,7 @@ if (registerForm) {
             email: email,
             password: password
         };
+        
 
         users.push(user);
 

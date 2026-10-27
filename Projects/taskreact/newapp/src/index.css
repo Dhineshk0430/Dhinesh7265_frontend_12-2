@@ -1,0 +1,29 @@
+*{
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.img{
+
+  width: 50px;
+  padding-left: 10px;
+}
+
+.nav{
+background-color: bisque;
+  display: flex;
+  justify-content:space-between ;
+}
+
+.navbtn{
+
+ display: flex;
+ justify-content: space-between;
+ width: 400px;
+ padding-right: 20px;
+ align-items: center;
+
+}

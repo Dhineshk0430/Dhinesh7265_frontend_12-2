@@ -1,0 +1,23 @@
+.welcome{
+
+background-color: rgb(63, 63, 226);
+color: white;
+text-align: center;
+padding: 10px;
+}
+
+.btn{
+
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.loginbtn{
+
+  padding: 10px;
+  background-color: orange;
+  color: black;
+  text-align: center;
+
+}
