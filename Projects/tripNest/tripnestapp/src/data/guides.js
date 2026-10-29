@@ -1,0 +1,123 @@
+export const guides = [
+  {
+    id: 'gde-1',
+    name: 'Murugan Sundaram',
+    destinationId: 'madurai',
+    location: 'Madurai & Rameswaram, Tamil Nadu',
+    photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80',
+    languages: ['Tamil', 'English', 'Hindi'],
+    category: 'Temple and spiritual tours',
+    specialization: 'Meenakshi Temple Architecture, 22 Theerthams & Pandya Dynasty Lore',
+    rating: 4.98,
+    reviewCount: 420,
+    pricePerHour: 450,
+    pricePerTour: 2200,
+    availability: 'Available Today',
+    availableDays: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+    experienceYears: 14,
+    verified: true,
+    badges: ['Govt. Certified Guide', 'Pandya Heritage Scholar', 'Top Rated 2026'],
+    intro: 'Born and raised in the temple shadows of the ancient City That Never Sleeps. I decode the millennia-old sculptured secrets of the 14 soaring gopurams and lead sacred spiritual trails.',
+    tours: [
+      { id: 't-101', name: 'Arulmigu Meenakshi Temple & 1000 Pillars Deep Dive', duration: '3.5 hours', price: 1800 },
+      { id: 't-102', name: 'Madurai Nighttime Street Food & Kari Dosa Trail', duration: '2.5 hours', price: 1500 },
+      { id: 't-103', name: 'Full-Day Madurai to Rameswaram & Dhanushkodi Expedition', duration: '9 hours', price: 3400 }
+    ]
+  },
+  {
+    id: 'gde-2',
+    name: 'Selvi Natarajan',
+    destinationId: 'chennai',
+    location: 'Chennai & Mahabalipuram, Tamil Nadu',
+    photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80',
+    languages: ['Tamil', 'English', 'French'],
+    category: 'Historical tours',
+    specialization: 'Pallava UNESCO Monoliths, Mylapore Heritage Walks & Carnatic Culture',
+    rating: 4.95,
+    reviewCount: 380,
+    pricePerHour: 500,
+    pricePerTour: 2400,
+    availability: 'Available Today',
+    availableDays: ['All Days'],
+    experienceYears: 9,
+    verified: true,
+    badges: ['Archaeology Scholar', 'UNESCO Heritage Expert', 'Mylapore Native'],
+    intro: 'Archaeologist and storyteller specializing in the 7th-century rock carvings of Mahabalipuram and the living culture, temple car festivals, and filter coffee rituals of Mylapore.',
+    tours: [
+      { id: 't-201', name: 'Mylapore Cultural Walk & Kapaleeshwarar Temple Rituals', duration: '3 hours', price: 1600 },
+      { id: 't-202', name: 'Mahabalipuram UNESCO Shore Temple & Pancha Rathas Odyssey', duration: '4.5 hours', price: 2400 }
+    ]
+  },
+  {
+    id: 'gde-3',
+    name: 'K. Senthil Kumar',
+    destinationId: 'ooty',
+    location: 'Ooty & Nilgiris, Tamil Nadu',
+    photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80',
+    languages: ['Tamil', 'English', 'Malayalam', 'Badaga'],
+    category: 'Nature and trekking',
+    specialization: 'Nilgiri Mountain Railway, Toda Tribal Settlements & Shola Trails',
+    rating: 4.92,
+    reviewCount: 290,
+    pricePerHour: 400,
+    pricePerTour: 2000,
+    availability: 'Available Tomorrow',
+    availableDays: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+    experienceYears: 12,
+    verified: true,
+    badges: ['Eco-Trek Leader', 'Nilgiri Native', 'Birdwatching Guide'],
+    intro: 'Native of the Nilgiri hills. I guide travelers through misty tea plantations, century-old toy train routes, secret viewpoints, and indigenous Toda hamlets.',
+    tours: [
+      { id: 't-301', name: 'Doddabetta Shola Forest Trek & Toda Hamlet Walk', duration: '4 hours', price: 1800 },
+      { id: 't-302', name: 'Nilgiri Tea Making & Organic Chocolate Tasting Trail', duration: '3 hours', price: 1500 }
+    ]
+  },
+  {
+    id: 'gde-4',
+    name: 'Meenakshi Krishnan',
+    destinationId: 'thanjavur',
+    location: 'Thanjavur & Trichy, Tamil Nadu',
+    photo: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80',
+    languages: ['Tamil', 'English', 'Sanskrit'],
+    category: 'Historical tours',
+    specialization: 'Great Living Chola Temples, Bronze Casting & Rockfort Heritage',
+    rating: 4.96,
+    reviewCount: 310,
+    pricePerHour: 450,
+    pricePerTour: 2100,
+    availability: 'Available Today',
+    availableDays: ['All Days'],
+    experienceYears: 10,
+    verified: true,
+    badges: ['Chola Historian', 'Epigraphy Specialist', 'Govt. Certified'],
+    intro: 'Passionate about ancient Tamil epigraphy, Chola military architecture, and lost-wax bronze casting. Discover why the Brihadeeswarar Temple vimana has astounded world engineers for 1,000 years.',
+    tours: [
+      { id: 't-401', name: 'Brihadeeswarar Big Temple Architectural Secrets Tour', duration: '3 hours', price: 1500 },
+      { id: 't-402', name: 'Royal Chola Bronzes & Thanjavur Art Plate Masterclass', duration: '3.5 hours', price: 1800 }
+    ]
+  },
+  {
+    id: 'gde-5',
+    name: 'Anandhi Rajan',
+    destinationId: 'coimbatore',
+    location: 'Coimbatore & Pollachi, Tamil Nadu',
+    photo: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80',
+    languages: ['Tamil', 'English', 'Telugu'],
+    category: 'Local culture',
+    specialization: 'Adiyogi Isha Spiritual Experience, Kongu Cuisine & Anamalai Wilderness',
+    rating: 4.88,
+    reviewCount: 245,
+    pricePerHour: 400,
+    pricePerTour: 1900,
+    availability: 'Available Today',
+    availableDays: ['All Days'],
+    experienceYears: 8,
+    verified: true,
+    badges: ['Yoga & Wellness Guide', 'Kongu Culture Expert'],
+    intro: 'Guiding visitors through the spiritual power spots of Velliangiri hills, sacred Murugan temple steps, and authentic Kongu farm country.',
+    tours: [
+      { id: 't-501', name: 'Adiyogi Sunset & Divya Darshanam Laser Show Tour', duration: '3.5 hours', price: 1600 },
+      { id: 't-502', name: 'Pollachi Coconut Farms & Topslip Wildlife Day Trip', duration: '6.5 hours', price: 2700 }
+    ]
+  }
+];
